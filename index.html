@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3</title>
+
+    <!----------------------DaisyUI CDN START----------------------->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!----------------------DaisyUI CDN END--------------------------------->
+
+    <!----------------------Google-Font-Manrop starts here------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!----------------------Google-Font-Manrop End here----------------------->
+
+    <!----------------------Remix-icon---------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!----------------------Remix-Icon-End------------------------------------>
+
+
+    <!----------------------------------color--------------------------------->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                        "button-color": "#ABEF5F",
+                        "button-text": "#1C1C1C",
+                        "small-h1": "#494949",
+                        "small-p": "#737373",
+                    },
+                },
+            },
+        };
+    </script>
+    <!---------------------------------color--End---------------------------->
+
+
+    <!-----------------------------CSS Font Family--------------------------->
+    <style>
+        .font-f {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+    <!-------------------------CSS Font Family End-------------------------->
+</head>
+
+
+
+<body class="font-f">
+    <!----------------------Header Section Starts Here--------------------->
+    <header class="bg-gradient-to-t from-[#c6c3c309] to-[#f0e1e11d] pb-24">
+        <div class="container mx-auto">
+
+            <!----------------Nav section Starts Here--------------------->
+            <nav class="">
+                <div class="navbar bg-base-100 bg-gradient-to-t from-[#c6c3c309] to-[#f0e1e11d]">
+                    <div class="navbar-start lg:w-[30%] xl:w-[50%]">
+                        <i
+                            class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                        <a
+                            class="btn btn-ghost text-[32px] font-extrabold pl-0 ml-2 hover:bg-green-400 hover:rounded-xl">Rinterio</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 text-[#737373]">
+                            <li class="font-extrabold hover:bg-green-400 hover:rounded-xl text-[#494949]">
+                                <a>Home</a>
+                            </li>
+                            <li class="hover:font-extrabold hover:bg-green-400 hover:rounded-xl hover:text-[#494949]">
+                                <a>Services</a>
+                            </li>
+                            <li class="hover:font-extrabold hover:bg-green-400 hover:rounded-xl hover:text-[#494949]">
+                                <a>Portfolio</a>
+                            </li>
+                            <li class="hover:font-extrabold hover:bg-green-400 hover:rounded-xl hover:text-[#494949]">
+                                <a>Blogs</a>
+                            </li>
+                            <li class="hover:font-extrabold hover:bg-green-400 hover:rounded-xl hover:text-[#494949]">
+                                <a>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="sm:flex hidden">
+                            <i
+                                class="ri-search-line w-12 h-12 flex justify-center items-center text-2xl rounded-[50%] text-[#737373] bg-white border hover:bg-green-400"></i>
+                            <i
+                                class="ri-shopping-cart-2-line w-12 h-12 flex justify-center items-center text-2xl rounded-[50%] text-[#737373] mx-4 bg-white border hover:bg-green-400"></i>
+                        </div>
+                        <a
+                            class="btn hover:bg-green-400 rounded-[32px] text-xl bg-button-color text-button-text font-extrabold sm:flex hidden">Book
+                            Consult
+                            <i
+                                class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-white font-light bg-[#1C1C1C] border"></i></a>
+                        <div
+                            class="dropdown w-12 h-12 sm:hidden rounded-[50%] bg-white border flex justify-center items-center">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow top-0 right-0">
+                                <li class="hover:font-extrabold hover:text-[#494949]">
+                                    <a>Home</a>
+                                </li>
+                                <li class="hover:font-extrabold hover:text-[#494949]">
+                                    <a>Services</a>
+                                </li>
+                                <li class="hover:font-extrabold hover:text-[#494949]">
+                                    <a>Portfolio</a>
+                                </li>
+                                <li class="hover:font-extrabold hover:text-[#494949]">
+                                    <a>Blogs</a>
+                                </li>
+                                <li class="hover:font-extrabold hover:text-[#494949]">
+                                    <a>Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!---------------------Banner Section Starts Here--------------------->
+            <div class="text-center flex flex-col justify-center items-center">
+                <img src="assets/banner.png" alt="" />
+                <h1 class="md:text-6xl sm:text-4xl text-3xl pr-6 pl-6 font-extrabold mt-6">
+                    A barn house of this design has a <br class="sm:block hidden" />
+                    striking appearance
+                </h1>
+                <p class="mt-6 mb-8 pr-6 pl-6">
+                    This classic design combines elements of a traditional farmhouse
+                    with barn-inspired features like a steeply pitched roof, <br />
+                    exposed beams, and a large front porch.
+                </p>
+                <button
+                    class="w-[206px] h-[56px] rounded-[32px] text-xl font-bold flex items-center justify-center hover:bg-green-400 gap-1 bg-[#D3F6AD]">
+                    View Details
+
+                    <div class="rounded-full flex justify-center items-center">
+                        <i
+                            class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                    </div>
+                </button>
+            </div>
+            <!---------------------Banner Section Ends Here--------------------->
+            <!-- nav-Section -->
+        </div>
+    </header>
+    <!-----------------------------Header Section Ends Here--------------------->
+
+
+
+    <!-----------------------------MAin Section Starts Here--------------------->
+    <main>
+        <!------------------------Section No :: 2 Starts Here------------------>
+        <section class="bg-[#F4F4F4] mx-auto pt-[50px]">
+            <div
+                class="container mx-auto md:flex xl:justify-center xl:bg-[url('./assets/Vector.png')] bg-no-repeat bg-left-top pt-[50px]">
+                <div class="flex justify-center items-center">
+                    <div>
+                        <div class="flex justify-center pl-5 md:justify-start">
+                            <button class="w-[138px] h-[38px] bg-white text-[#494949] rounded-3xl font-bold">
+                                <i class="ri-arrow-right-line font-bold text-[#494949]"></i>
+                                About Us
+                            </button>
+                        </div>
+
+                        <h1
+                            class="text-center px-5 lg:text-start lg:text-[40px] xl:text-[40px] text-[28px] font-bold text-[#212121] mt-4">
+                            We design thoughtful, <br />
+                            liveable spaces
+                        </h1>
+                        <p class="mt-6 text-center lg:text-start px-5">
+                            Design elements should be both visually appealing and practical.
+                            <br />
+                            For example, a well-designed kitchen layout should not only look
+                            attractive but <br />
+                            also be efficient for cooking and cleaning.
+                        </p>
+                        <!------------------CARD No :: 1------------------->
+                        <div class="p-5 xl:p-0">
+                            <div class="flex p-6 gap-6 bg-white rounded-2xl mt-6 xl:w-11/12">
+                                <img class="md:h-auto h-[18%]" src="assets/commercial.png" alt="" />
+                                <div>
+                                    <h2 class="card-title text-small-h1 text-xl font-extrabold pb-3">
+                                        Commercial
+                                    </h2>
+                                    <p class="text-small-p font-medium">
+                                        Commercial buildings serve a wide range of purposes <br />
+                                        offices to warehouses.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-----------------Card No :: 2----------------->
+                            <div class="flex p-6 gap-6 bg-white rounded-2xl mt-6 xl:w-11/12">
+                                <img class="md:h-auto h-[18%]" src="assets/residential.png" alt="" />
+                                <div>
+                                    <h2 class="card-title text-small-h1 text-xl font-extrabold pb-3">
+                                        Residential
+                                    </h2>
+                                    <p class="text-small-p font-medium">
+                                        The design and construction of these buildings require
+                                        <br />
+                                        careful planning
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!---------------------Card End Here----------------------->
+                    </div>
+                </div>
+                <div class="flex justify-center items-center p-5">
+                    <img class="h-full object-cover rounded-2xl" src="assets/Rectangle.png " alt="" />
+                </div>
+            </div>
+            <!-- Our-Monitoring-Section -->
+            <div class="container mt-24 p-5 sm:p-0 mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 bg-white rounded-3xl">
+                    <div class="flex flex-col justify-center items-center p-8">
+                        <img src="assets/comment-01.png" alt="" />
+                        <h1 class="text-small-h1 text-[40px] font-extrabold">235+</h1>
+                        <p class="font-medium text-small-p">Happy Client Review</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center p-8">
+                        <img src="assets/departement.png" alt="" />
+                        <h1 class="text-small-h1 text-[40px] font-extrabold">50+</h1>
+                        <p class="font-medium text-small-p">Work Departments</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center p-8">
+                        <img src="assets/Group 8.png" alt="" />
+                        <h1 class="text-small-h1 text-[40px] font-extrabold">30k+</h1>
+                        <p class="font-medium text-small-p">Our Happy Client</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center p-8">
+                        <img src="assets/user-multiple.png" alt="" />
+                        <h1 class="text-small-h1 text-[40px] font-extrabold">307+</h1>
+                        <p class="font-medium text-small-p">Staff Members</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Our-Monitoring-Section-END -->
+            <!-- Our Works Process-Section-->
+            <div class="flex justify-center mt-24">
+                <button class="w-[165px] h-[38px] bg-white text-[#494949] rounded-3xl font-bold">
+                    <i class="ri-arrow-right-line font-bold text-[#494949]"></i>
+                    How we works
+                </button>
+            </div>
+
+            <h1 class="text-center font-bold text-2xl md:text-[40px] text-[#212121] mt-4 mb-6 pl-5 pr-5">
+                Our Works Process
+            </h1>
+            <p class="text-center font-medium text-small-p pl-5 pr-5">
+                We begin by listening attentively to your specific requirements and
+                goals for your commercial project. <br />
+                This includes discussing the building's purpose, size, budget, and
+                desired timeline.
+            </p>
+            <!-- Our Works Process-Section-END -->
+            <!-- WORK-Card -->
+            <div class="container mx-auto pr-5 pl-5 pb-24 pt-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 bg-[#E7C1D3] rounded-3xl">
+                        <img src="assets/concept.png" alt="" />
+                        <h1 class="text-button-text text-xl font-extrabold my-[10px]">
+                            Concept
+                        </h1>
+                        <p class="font-medium text-small-h1">
+                            Our team conducts a thorough assessment of the proposed site,
+                            considering factors such.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-[#EFDA6E] rounded-3xl">
+                        <img src="assets/flow-chart.png" alt="" />
+                        <h1 class="text-button-text text-xl font-extrabold my-[10px]">
+                            Design Process
+                        </h1>
+                        <p class="font-medium text-small-h1">
+                            We provide recommendations based on our findings to ensure the
+                            project's feasibility.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-[#A4DAC3] rounded-3xl">
+                        <img src="assets/vision.png" alt="" />
+                        <h1 class="text-button-text text-xl font-extrabold my-[10px]">
+                            Supervision
+                        </h1>
+                        <p class="font-medium text-small-h1">
+                            Our architects and engineers develop detailed plans, including
+                            blueprints.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-[#77AAEA] rounded-3xl">
+                        <img src="assets/budget-planning.png" alt="" />
+                        <h1 class="text-button-text text-xl font-extrabold my-[10px]">
+                            Budget Planning
+                        </h1>
+                        <p class="font-medium text-small-h1">
+                            specifications, and material selections We assist in obtaining
+                            necessary permits
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- WORK-Card-end -->
+        </section>
+        <!-- Section-two-End -->
+
+        <!-- Our Our Latest Portfolio - text-->
+        <div class="sm:bg-white bg-[#F4F4F4] pb-8 sm:pb-8">
+            <div class="flex justify-center mt-0 sm:mt-24">
+                <button class="w-[246px] h-[38px] bg-[#EEFCDF] text-[#494949] rounded-3xl font-bold">
+                    <i class="ri-arrow-right-line font-bold text-[#494949]"></i>
+                    Explore our Latest works
+                </button>
+            </div>
+
+            <h1 class="text-center font-bold text-2xl md:text-[40px] text-[#212121] mt-4 mb-6 pl-5 pr-5">
+                Our Latest Portfolio
+            </h1>
+            <p class="text-center font-medium text-small-p pl-5 pr-5">
+                Financial planning ensures adequate safeguards and contingency plans
+                are in place before the project is started, and <br />
+                ensures that the plan is properly executed over the life of the
+                project. Construction
+            </p>
+        </div>
+        <!-- Our Our Latest Portfolio - text --End-->
+
+        <!-- Extra--Point--Section -->
+        <section class="container mx-auto grid-cols-1 grid sm:grid-cols-8 gap-6 sm:p-0 p-5 sm:bg-white bg-[#F4F4F4]">
+            <div
+                class="md:flex lg:col-span-5 md:items-center sm:col-span-8 p-6 border gap-6 rounded-2xl sm:mb-0 bg-white">
+                <img class="w-full sm:w-auto lg:h-full" src="assets/img1.png" alt="" />
+                <div>
+                    <h1 class="text-2xl text-small-h1 font-extrabold sm:mt-0 mt-6">
+                        Commercial
+                    </h1>
+                    <p class="mt-4 mb-5 text-small-p font-medium">
+                        Large projects can involve highly complex financial plans and
+                        often start with a conceptual
+                    </p>
+                    <button class="text-xl font-bold flex items-center rounded-[32px] justify-center gap-1">
+                        View Details
+
+                        <div class="rounded-full flex justify-center items-center">
+                            <i
+                                class="ri-arrow-right-up-line w-8 h-8 text-[#1C1C1C] flex justify-center items-center text-2xl rounded-[50%] font-light bg-button-color border"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6 bg-white border lg:col-span-3 sm:col-span-4 rounded-2xl">
+                <img class="w-full h-full" src="assets/img2.png" alt="" />
+            </div>
+
+            <!-- part-two -->
+            <div class="p-6 sm:col-span-4 border rounded-2xl bg-white lg:col-span-2">
+                <img class="w-full h-full" src="assets/img3.png" alt="" />
+            </div>
+            <div
+                class="md:flex md:items-center xl:gap-6 p-6 border gap-6 sm:mb-0 mb-6 rounded-2xl bg-white sm:col-span-8 lg:col-span-4">
+                <img class="w-full lg:h-full xl:h-full sm:w-auto" src="assets/img4.png" alt="" />
+                <div>
+                    <h1 class="text-2xl text-small-h1 font-extrabold sm:mt-0 mt-6">
+                        Commercial
+                    </h1>
+                    <p class="mt-4 mb-5 text-small-p font-medium lg:text-[14px] xl:text-[16px]">
+                        building or other asset that affect safety, including its use,
+                        expansion
+                    </p>
+                    <button
+                        class="rounded-[32px] text-xl xl:text-xl lg:text-[17px] font-bold flex items-center justify-center gap-1">
+                        View Details
+                        <div class="rounded-full flex justify-center items-center">
+                            <i
+                                class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6 lg:col-span-2 border sm:col-span-4 rounded-2xl bg-white">
+                <img class="w-full h-full" src="assets/img5.png" alt="" />
+            </div>
+        </section>
+        <!-- Extra--Point--Section-End -->
+
+
+        <!--  Rinterio News - text-->
+        <div class="bg-[#F4F4F4] pb-8 pt-8 xl:mt-24">
+            <div class="flex justify-center mt-0 sm:mt-24">
+                <button class="w-[164px] h-[38px] bg-[#EEFCDF] text-[#494949] rounded-3xl font-bold">
+                    <i class="ri-arrow-right-line font-bold text-[#494949]"></i>
+                    Rinterio News
+                </button>
+            </div>
+
+            <h1 class="text-center font-bold text-2xl md:text-[40px] text-[#212121] mt-4 mb-6 pl-5 pr-5">
+                Read Our Articles and News
+            </h1>
+            <p class="text-center font-medium text-small-p pl-5 pr-5">
+                Using renewable energy sources, improving insulation, and optimizing
+                building orientation to <br />
+                reduce energy consumption.
+            </p>
+        </div>
+        <!--  Rinterio News - text --End-->
+        <!--  Rinterio News - CARD ---->
+        <section class="bg-[#F4F4F4] pb-24 mb-2">
+            <div class="container mx-auto grid sm:grid-cols-2 lg:grid-cols-3 p-5 gap-6">
+                <!-- Cart-one -->
+                <div class="p-6 bg-white rounded-3xl flex flex-col justify-center">
+                    <img src="assets/article1.png" alt="" />
+                    <div class="flex gap-3 mt-4 mb-2">
+                        <div class="flex">
+                            <img src="assets/calendar-03.png" alt="" />
+                            <p>July14, 2024</p>
+                        </div>
+                        <div class="flex">
+                            <img src="assets/user-circle.png" alt="" />
+                            <p>By Admin</p>
+                        </div>
+                    </div>
+                    <h1 class="text-small-h1 text-xl font-extrabold mb-2">
+                        How to choose the furniture <br />
+                        right of your home.
+                    </h1>
+                    <p class="text-small-p font-medium mb-3">
+                        The barn house captivates with its blend of <br />
+                        rustic charm and modern.
+                    </p>
+                    <div>
+                        <button class="rounded-[32px] text-xl font-bold flex items-center justify-center gap-1">
+                            View Details
+
+                            <div class="rounded-full flex justify-center items-center">
+                                <i
+                                    class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <!-- Cart-Two -->
+                <div class="p-6 bg-white rounded-3xl flex flex-col justify-center">
+                    <img src="assets/article2.png" alt="" />
+                    <div class="flex gap-3 mt-4 mb-2">
+                        <div class="flex">
+                            <img src="assets/calendar-03.png" alt="" />
+                            <p>July14, 2024</p>
+                        </div>
+                        <div class="flex">
+                            <img src="assets/user-circle.png" alt="" />
+                            <p>By Admin</p>
+                        </div>
+                    </div>
+                    <h1 class="text-small-h1 text-xl font-extrabold mb-2">
+                        How to choose the furniture <br />
+                        right of your home.
+                    </h1>
+                    <p class="text-small-p font-medium mb-3">
+                        The barn house captivates with its blend of <br />
+                        rustic charm and modern.
+                    </p>
+                    <div>
+                        <button class="rounded-[32px] text-xl font-bold flex items-center justify-center gap-1">
+                            View Details
+
+                            <div class="rounded-full flex justify-center items-center">
+                                <i
+                                    class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <!-- Cart-Three -->
+                <div class="p-6 bg-white rounded-3xl flex flex-col justify-center">
+                    <img src="assets/article3.png" alt="" />
+                    <div class="flex gap-3 mt-4 mb-2">
+                        <div class="flex">
+                            <img src="assets/calendar-03.png" alt="" />
+                            <p>July14, 2024</p>
+                        </div>
+                        <div class="flex">
+                            <img src="assets/user-circle.png" alt="" />
+                            <p>By Admin</p>
+                        </div>
+                    </div>
+                    <h1 class="text-small-h1 text-xl font-extrabold mb-2">
+                        How to choose the furniture <br />
+                        right of your home.
+                    </h1>
+                    <p class="text-small-p font-medium mb-3">
+                        The barn house captivates with its blend of <br />
+                        rustic charm and modern.
+                    </p>
+                    <div>
+                        <button class="rounded-[32px] text-xl font-bold flex items-center justify-center gap-1">
+                            View Details
+
+                            <div class="rounded-full flex justify-center items-center">
+                                <i
+                                    class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  Rinterio News - CARD --End-->
+        <!-- Let’s Discuss Next Projec Section-text & Input ---->
+        <section class="bg-[url('./assets/bg.jpg')] px-[20px] py-[20px] md:px-[235px] md:py-[100px] bg-cover">
+            <div class="mx-auto container">
+                <div class="pb-8">
+                    <div class="flex justify-center mt-0 sm:mt-24">
+                        <button class="w-[164px] h-[38px] bg-[#EEFCDF] text-[#494949] rounded-3xl font-bold">
+                            <i class="ri-arrow-right-line font-bold text-[#494949]"></i>
+                            Let’s Connect
+                        </button>
+                    </div>
+
+                    <h1 class="text-center font-bold text-2xl md:text-[40px] text-[#212121] mt-4 mb-6 pl-5 pr-5">
+                        Let’s Discuss Next Project
+                    </h1>
+                    <p class="text-center font-medium text-small-p pl-5 pr-5">
+                        By using inclusive design strategies in city and urban planning,
+                        we can build <br />
+                        spaces that allow children to flourish, learn, play, and grow.
+                    </p>
+                </div>
+                <!-- Input -Section -->
+                <form class="grid gap-5 grid-cols-1 md:grid-cols-2">
+                    <input class="px-4 py-5 rounded-full" type="text" placeholder="First Name*" />
+                    <input class="px-4 py-5 rounded-full" type="text" placeholder="Last Name*" />
+                    <input class="px-4 py-5 rounded-full" type="text" placeholder=" Phone Number*" />
+                    <input class="px-4 py-5 rounded-full" type="Email" placeholder="Email Number*" />
+                    <textarea class="px-4 py-5 md:col-span-2 h-[310px] rounded-[32px]" type="text"
+                        placeholder="Write your message here"></textarea>
+                </form>
+                <div class="text-center mt-6">
+                    <button
+                        class="rounded-[32px] w-full text-xl font-bold flex items-center justify-center gap-1 bg-button-color p-3 hover:bg-green-400">
+                        Send Mail
+
+                        <div class="rounded-full flex justify-center items-center">
+                            <i
+                                class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#FFFFFF] font-light bg-black border"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- Input -Section-End -->
+        </section>
+
+        <!--  Let’s Discuss Next Projec Section-text & Input --End-->
+    </main>
+    <!-- Main-Section-end -->
+    <!-- Foter-Section--->
+    <footer class="bg-button-text py-[72px]">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-center">
+                <i
+                    class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#1C1C1C] font-light bg-button-color border"></i>
+                <a class="btn btn-ghost text-[32px] text-[#E9E9E9] font-extrabold pl-0 ml-2">Rinterio</a>
+            </div>
+            <p class="font-medium text-small-p text-center mb-10 mt-4 px-5">
+                The barn house captivates with its blend of rustic charm and modern
+                sophistication, <br />
+                featuring weathered wood, sleek metal accents.
+            </p>
+        </div>
+        <ul class="flex flex-col md:flex-row gap-8 items-center md:gap-24 justify-center px-1 text-[#E9E9E9]">
+            <li class="hover:font-extrabold hover:text-[#494949]">
+                <a>Home</a>
+            </li>
+            <li class="hover:font-extrabold hover:text-[#494949]">
+                <a>Services</a>
+            </li>
+            <li class="hover:font-extrabold hover:text-[#494949]">
+                <a>Portfolio</a>
+            </li>
+            <li class="hover:font-extrabold hover:text-[#494949]">
+                <a>Blogs</a>
+            </li>
+            <li class="hover:font-extrabold hover:text-[#494949]">
+                <a>Contact Us</a>
+            </li>
+        </ul>
+        <div class="text-center flex justify-center items-center mt-8">
+            <button
+                class="rounded-[32px] w-[300px] h-[56px] text-xl font-bold flex items-center justify-center gap-1 bg-button-color p-3 hover:bg-green-400">
+                Book Consult
+
+                <div class="rounded-full flex justify-center items-center">
+                    <i
+                        class="ri-arrow-right-up-line w-8 h-8 flex justify-center items-center text-2xl rounded-[50%] text-[#FFFFFF] font-light bg-black border"></i>
+                </div>
+            </button>
+        </div>
+    </footer>
+    <!-- Footer-Section-end -->
+</body>
+
+</html>
